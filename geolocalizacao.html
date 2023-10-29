@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocaliza</title>
+</head>
+<body>
+    <script>
+        // Função
+        function obterLocalizacao(){
+            if (navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(
+                function(position){
+                    document.write("latitude:", position.coords.latitude)
+                    document.write("longitude:", position.coords.longitude)
+                },
+                function(error){
+                    console.error("Erro ao obter")
+                }
+            
+            );
+        }else{
+            console.log("Geolocalização")
+        }
+    }
+        obterLocalizacao();
+    </script>
+</body>
+</html>

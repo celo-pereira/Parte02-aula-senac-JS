@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudação</title>
+</head>
+<body>
+    <h1><span id="saudaJs"></span>Exemplo!!!</h1>
+    <script>
+        // Declarar Variaveis
+        let hora = new Date().getHours();
+        let mensagem
+        if(hora >= 6 && hora < 12)
+        {
+            mensagem = "Bom dia "
+        }else if (hora >= 12 && hora < 18)
+        {
+            mensagem = "Boa tarde "
+        }else{
+            mensagem = "Boa noite "
+        }
+        let elemento = document.getElementById ("saudaJs")
+        elemento.innerHTML = mensagem
+    </script>
+</body>
+</html>
